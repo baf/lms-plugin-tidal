@@ -1,7 +1,7 @@
 <?xml version='1.0' standalone='yes'?>
 <extensions>
   <plugins>
-    <plugin name="TIDAL" maxTarget="*" version="1.7.3" minTarget="8.3">
+    <plugin name="TIDALmod" maxTarget="*" version="1.7.3" minTarget="8.3">
       <link>https://github.com/baf/lms-plugin-tidal</link>
       <url>https://github.com/baf/lms-plugin-tidal/releases/download/1.7.3/TIDAL.zip</url>
       <category>musicservices</category>
