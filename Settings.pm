@@ -36,6 +36,7 @@ sub handler {
 	if ($params->{saveSettings}) {
 		my $dontImportAccounts = $prefs->get('dontImportAccounts') || {};
 		my $explicitAlbumHandling = $prefs->get('explicitAlbumHandling') || {};
+		my $useHTTPSImages = $prefs->get('useHTTPSImages') || {};
 		foreach my $prefName (keys %$params) {
 			if ($prefName =~ /^pref_dontimport_(.*)/) {
 				$dontImportAccounts->{$1} = $params->{$prefName};
@@ -46,6 +47,8 @@ sub handler {
 		}
 		$prefs->set('dontImportAccounts', $dontImportAccounts);
 		$prefs->set('explicitAlbumHandling', $explicitAlbumHandling);
+		$prefs->set('useHTTPSImages', $useHTTPSImages);
+		
 	}
 
 	return $class->SUPER::handler($client, $params);
@@ -67,6 +70,7 @@ sub beforeRender {
 
 	$params->{dontImportAccounts} = $prefs->get('dontImportAccounts') || {};
 	$params->{explicitAlbumHandling} = $prefs->get('explicitAlbumHandling') || {};
+	$params->{useHTTPSImages} = $prefs->get('useHTTPSImages') || {};
 }
 
 1;

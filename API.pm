@@ -12,7 +12,8 @@ our @EXPORT_OK = qw(AURL BURL LURL SCOPES GRANT_TYPE_DEVICE DEFAULT_LIMIT MAX_LI
 use constant AURL => 'https://auth.tidal.com';
 use constant BURL => 'https://api.tidal.com/v1';
 use constant LURL => 'https://listen.tidal.com/v2';
-use constant IURL => 'http://resources.tidal.com/images/';
+use constant IURL_HTTP  => 'http://resources.tidal.com/images/';
+use constant IURL_HTTPS => 'https://resources.tidal.com/images/';
 use constant SCOPES => 'r_usr+w_usr';
 use constant GRANT_TYPE_DEVICE => 'urn:ietf:params:oauth:grant-type:device_code';
 
@@ -93,7 +94,8 @@ sub getImageUrl {
 
 		if ($iconSize) {
 			$coverId =~ s/-/\//g;
-			$data->{cover} = IURL . $coverId . "/$iconSize.jpg";
+			my $base_url = $prefs->get('useHTTPSImages') ? IURL_HTTPS : IURL_HTTP;
+            $data->{cover} = $base_url . $coverId . "/$iconSize.jpg";
 		}
 		else {
 			delete $data->{cover};
