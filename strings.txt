@@ -116,10 +116,10 @@ PLUGIN_TIDAL_COUNTRY_CODE_DESC
 	HU	Ezzel a beállítással egy adott országkódot kényszeríthet ki. Ez általában az Ön TIDAL-profiljából származik. De bizonyos körülmények között ez zavaró eredményekhez vezethet. Például. A "CH" mindig a német menüket adja vissza, még akkor is, ha a francia nyelvet használja. De nem tudjuk megmondani az API-nak, hogy milyen nyelvet használjon.
 
 PLUGIN_TIDAL_USEHTTPSIMAGES
-	EN Fetch album art with HTTPS
+	EN	Fetch album art with HTTPS
 
 PLUGIN_TIDAL_USEHTTPSIMAGES_DESC
-	EN Enable to use HTTPS for fetching album art images
+	EN	Enable to use HTTPS instead of HTTP for fetching album art images. Useful for reverse proxies that use HTTPS.
 
 PLUGIN_TIDAL_MY_MIX
 	DA	Mit Miks
