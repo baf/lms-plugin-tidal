@@ -7,7 +7,7 @@
       <category>musicservices</category>
       <icon>https://raw.githubusercontent.com/baf/lms-plugin-tidal/main/HTML/EN/plugins/TIDAL/html/tidal_MTL_svg_tidal.png</icon>
       <title lang="EN">TIDAL local</title>
-      <sha>cdc80e4dac80bd608376a47be612d4e0ba07572e</sha>
+      <sha>e95c20a812c24821fe3fd3b96c8241b87a297976</sha>
       <creator>baf, Michael Herger, philippe_44</creator>
       <desc lang="EN">modified TIDAL for local LMS use</desc>
     </plugin>
